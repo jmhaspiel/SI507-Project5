@@ -1,8 +1,13 @@
 ## import statements
-
+import requests_oauthlib
+import webbrowser
+import json
+import datetime
 
 ## CACHING SETUP
 
+CLIENT_ID = secret_data.app_id #'get this from spotify or create a secret data file, see spotify_data.py
+CLIENT_SECRET = spotify_data.app_secret
 
 
 
@@ -12,6 +17,6 @@
 
 
 
-
+client.info()
 
 ## Make sure to run your code and write CSV files by the end of the program.
