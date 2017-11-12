@@ -1,1 +1,13 @@
 Put your Project 5 brief explanation, as directed, here.
+In my project 5 I will use the Tumblr API to get information about posts in a given blog:
+I will differentiate between the photos and answers type of posts and pull different information for each type of post.
+
+For Photos:My program will pull the following
+title, summary, time posted and 3 tags about the given post
+
+For Answers:My program will pull the following
+title, summary, time posted, question, and question asker
+
+I'll write 2 CSV files, one for the photos posts in the blog, one for the answers posts in the blog. 
+    - Data in Photos CSV file: 3-6 columns -- title, summary, time posted and 3 tags about the given post
+    - Data in Photos CSV file: 5 columns -- title, summary, time posted, question, and question asker
