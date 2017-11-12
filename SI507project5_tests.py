@@ -25,7 +25,10 @@ class TestTumlbr(unittest.TestCase):
         self.assertEqual(type(self.tumblr_test['response']['posts'][0]), dict)
 
     def test_result_note_type(self):
-        self.assertEqual(type(self.tumblr_test['response']['posts'][0]['note_count']), int)    	
+        self.assertEqual(type(self.tumblr_test['response']['posts'][0]['note_count']), int)   
+
+    def test_request_url(self):
+    	self.assertTrue("http://api.tumblr.com/v2/blog/endless-puppies.tumblr.com/posts" == tumblr_url)
 
     def tearDown(self):
     	self.photofile.close()

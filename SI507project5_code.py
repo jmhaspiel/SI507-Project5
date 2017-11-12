@@ -210,6 +210,7 @@ if not REQUEST_TOKEN_URL or not BASE_AUTH_URL:
 
 tumblr_baseurl = 'http://api.tumblr.com/v2/blog/{0}/{1}'
 tumblr_url = tumblr_baseurl.format('endless-puppies.tumblr.com', 'posts')
+print(tumblr_url)
 
 tumblr_params = {
 	'limit': 20
@@ -218,12 +219,6 @@ tumblr_result = get_data_from_api(tumblr_url,"Tumblr",tumblr_params)
 
 
 
-# def get_request_token(client_key = CLIENT_KEY, client_secret = CLIENT_SECRET, request_token_url = REQUEST_TOKEN_URL, verifier_auto = True):
-#    tumblr_inst = requests_oauthlib.OAuth1Session(client_key, client_secret, callback_uri ='https://www.programsinformationpeople.org/runestone/oauth')
-
-#    return tumblr_inst.fetch_request_token(request_token_url)
-
-# tumblr = get_request_token()
 
 strwrt1 = ""
 for blogpost in tumblr_result['response']['posts']:
@@ -235,7 +230,7 @@ for blogpost in tumblr_result['response']['posts']:
 		strwrt1+= ","
 		strwrt1+= str(blogpost['note_count'])
 		strwrt1+= ","
-		strwrt1+= blogpost['summary'].strip(',')
+		strwrt1+= blogpost['summary'].replace(',',"")
 		for item in blogpost['tags'][0:2]:
 			strwrt1+= ","
 			strwrt1+=item
